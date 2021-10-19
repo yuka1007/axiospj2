@@ -1,8 +1,9 @@
 module.exports = {
   devServer: {
     proxy: {
-      "/api/": {
-        target: "http://localhost:8080/",
+      "/api": {
+        target: "https://api.coin.z.com/public",
+        pathRewrite: { "/api":""}
       }
     }
   }
